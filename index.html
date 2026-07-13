@@ -34,6 +34,10 @@
                     <li><a href="#hero" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#todo" class="nav-link">To-Do</a></li>
+                    <li><a href="#quiz" class="nav-link">Quiz</a></li>
+                    <li><a href="#api-data" class="nav-link">Joke API</a></li>
                 </ul>
             </nav>
 
@@ -243,6 +247,286 @@
         </section>
 
 
+        <!-- ==================== CONTACT FORM SECTION ==================== -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">03. Let's Talk</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Contact Info -->
+                    <div class="contact-info scroll-reveal">
+                        <h3 class="contact-title">Have a project in mind or just want to say hello?</h3>
+                        <p class="contact-text">
+                            I'm always open to discussing new opportunities, interesting projects, or just having a conversation about tech and AI. Feel free to reach out!
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="contact-item-text">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:tanya.rathore@example.com" class="contact-link">tanya.rathore@example.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="contact-item-text">
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">India &mdash; Open to Remote</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <div class="contact-item-text">
+                                    <span class="contact-label">Status</span>
+                                    <span class="contact-value">Open to Internships &amp; Collaborations</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials-wrapper">
+                            <span class="contact-socials-title">Find me on</span>
+                            <div class="contact-socials">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Form -->
+                    <div class="contact-form-container scroll-reveal">
+                        <!-- Success message (hidden by default) -->
+                        <div class="form-success-msg" id="form-success" aria-live="polite">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <p>Your message has been sent! I'll get back to you soon.</p>
+                        </div>
+
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-row">
+                                <!-- Name Field -->
+                                <div class="form-group" id="group-name">
+                                    <label for="contact-name">Full Name <span class="required-star">*</span></label>
+                                    <input
+                                        type="text"
+                                        id="contact-name"
+                                        name="name"
+                                        placeholder="e.g. Tanya Rathore"
+                                        autocomplete="name"
+                                    >
+                                    <span class="field-error" id="error-name"></span>
+                                </div>
+
+                                <!-- Email Field -->
+                                <div class="form-group" id="group-email">
+                                    <label for="contact-email">Email Address <span class="required-star">*</span></label>
+                                    <input
+                                        type="email"
+                                        id="contact-email"
+                                        name="email"
+                                        placeholder="you@example.com"
+                                        autocomplete="email"
+                                    >
+                                    <span class="field-error" id="error-email"></span>
+                                </div>
+                            </div>
+
+                            <!-- Subject Field -->
+                            <div class="form-group" id="group-subject">
+                                <label for="contact-subject">Subject <span class="required-star">*</span></label>
+                                <input
+                                    type="text"
+                                    id="contact-subject"
+                                    name="subject"
+                                    placeholder="What's this about?"
+                                >
+                                <span class="field-error" id="error-subject"></span>
+                            </div>
+
+                            <!-- Phone Field (optional) -->
+                            <div class="form-group" id="group-phone">
+                                <label for="contact-phone">Phone Number <span class="optional-tag">(optional)</span></label>
+                                <input
+                                    type="tel"
+                                    id="contact-phone"
+                                    name="phone"
+                                    placeholder="+91 98765 43210"
+                                    autocomplete="tel"
+                                >
+                                <span class="field-error" id="error-phone"></span>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div class="form-group" id="group-message">
+                                <label for="contact-message">Message <span class="required-star">*</span></label>
+                                <textarea
+                                    id="contact-message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Write your message here..."
+                                ></textarea>
+                                <span class="field-error" id="error-message"></span>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-block" id="contact-submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TO-DO LIST SECTION ==================== -->
+        <section id="todo" class="todo-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">04. Productivity</span>
+                    <h2 class="section-title">My Task Manager</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="todo-wrapper scroll-reveal">
+                    <!-- Add Task Panel -->
+                    <div class="todo-input-panel">
+                        <div class="todo-input-row">
+                            <div class="todo-text-input-wrap">
+                                <i class="fa-solid fa-pen-to-square todo-input-icon"></i>
+                                <input
+                                    type="text"
+                                    id="todo-input"
+                                    class="todo-text-input"
+                                    placeholder="Add a new task..."
+                                    maxlength="120"
+                                    aria-label="New task text"
+                                >
+                            </div>
+                            <select id="todo-priority" class="todo-priority-select" aria-label="Task priority">
+                                <option value="low">&#x1F7E2; Low</option>
+                                <option value="medium" selected>&#x1F7E1; Medium</option>
+                                <option value="high">&#x1F534; High</option>
+                            </select>
+                            <button class="btn btn-primary" id="todo-add-btn" aria-label="Add task">
+                                <i class="fa-solid fa-plus"></i> Add
+                            </button>
+                        </div>
+                        <span class="todo-input-error" id="todo-input-error"></span>
+                    </div>
+
+                    <!-- Filter Tabs -->
+                    <div class="todo-filters" role="tablist" aria-label="Filter tasks">
+                        <button class="todo-filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+                        <button class="todo-filter-btn" data-filter="active" role="tab" aria-selected="false">Active</button>
+                        <button class="todo-filter-btn" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+                    </div>
+
+                    <!-- Task List -->
+                    <ul class="todo-list" id="todo-list" aria-label="Task list" aria-live="polite">
+                        <!-- Tasks rendered by JS -->
+                    </ul>
+
+                    <!-- Empty state placeholder -->
+                    <div class="todo-empty" id="todo-empty">
+                        <i class="fa-regular fa-clipboard"></i>
+                        <p>No tasks here. Add one above!</p>
+                    </div>
+
+                    <!-- Footer Stats -->
+                    <div class="todo-stats" id="todo-stats">
+                        <span id="todo-remaining">0 tasks remaining</span>
+                        <button class="todo-clear-btn" id="todo-clear-btn">Clear Completed</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== QUIZ SECTION ==================== -->
+        <section id="quiz" class="quiz-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">05. Knowledge Check</span>
+                    <h2 class="section-title">Interactive Tech Quiz</h2>
+                    <div class="section-underline"></div>
+                </div>
+                
+                <div class="quiz-wrapper scroll-reveal">
+                    <div class="quiz-card">
+                        <!-- Score Display (Hidden initially) -->
+                        <div id="quiz-results" class="quiz-results" style="display: none;">
+                            <h3 class="results-title">Quiz Completed!</h3>
+                            <p class="results-score">Your Score: <span id="score-text" class="text-gradient">0/5</span></p>
+                            <button id="restart-quiz-btn" class="btn btn-primary">Try Again</button>
+                        </div>
+
+                        <!-- Quiz Content -->
+                        <div id="quiz-content">
+                            <div class="quiz-progress">
+                                <span id="question-counter">Question 1 of 5</span>
+                                <div class="progress-bar-container">
+                                    <div id="quiz-progress-bar" class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            
+                            <h3 id="quiz-question" class="quiz-question-text">Loading question...</h3>
+                            
+                            <div id="quiz-options" class="quiz-options-container">
+                                <!-- Options injected by JS -->
+                            </div>
+                            
+                            <div class="quiz-footer">
+                                <button id="next-question-btn" class="btn btn-primary" disabled>Next Question <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== API FETCH SECTION ==================== -->
+        <section id="api-data" class="api-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">06. Live Data</span>
+                    <h2 class="section-title">Programmer Joke of the Day</h2>
+                    <div class="section-underline"></div>
+                </div>
+                
+                <div class="api-wrapper scroll-reveal">
+                    <div class="quote-card">
+                        <div class="quote-icon"><i class="fa-solid fa-code"></i></div>
+                        <div id="quote-content" class="quote-content">
+                            <div class="loading-spinner">
+                                <i class="fa-solid fa-circle-notch fa-spin"></i> Fetching joke...
+                            </div>
+                        </div>
+                        <div class="quote-actions">
+                            <button id="fetch-quote-btn" class="btn btn-outline">
+                                <i class="fa-solid fa-rotate-right"></i> Get Another Joke
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- ==================== FOOTER ==================== -->
@@ -257,7 +541,7 @@
             
             <div class="footer-right">
                 <p class="copyright">&copy; 2026 Tanya Rathore. All rights reserved.</p>
-                <p class="attribution">Designed & Built for ApexPlanet Internship Task-1</p>
+                <p class="attribution">Designed &amp; Built for ApexPlanet Internship &mdash; Task 3</p>
             </div>
         </div>
         

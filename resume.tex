@@ -1,0 +1,160 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.7in, top=0.6in, right=0.7in, bottom=0.6in}
+
+\setlist{noitemsep, topsep=2pt}
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2} \\
+  \end{tabular*}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% Personal Info
+\newcommand{\name}{TANYA RATHORE}
+\newcommand{\phone}{+91 7307633409}
+\newcommand{\emaila}{tanyarathore7307@gmail.com}
+\newcommand{\linkedin}{https://www.linkedin.com/in/tanya-rathore-26a653284/}
+\newcommand{\github}{https://github.com/Tanya0294}
+\newcommand{\portfolio}{https://tanyarathore-portfolio.netlify.app/}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Huge \name} \\[6pt]
+
+\small
+\faPhone\ \phone \quad
+\href{mailto:\emaila}{\faEnvelope\ \emaila} \quad
+\href{\linkedin}{\faLinkedin\ LinkedIn} \quad
+\href{\github}{\faGithub\ GitHub} \quad
+\href{\portfolio}{\faGlobe\ Portfolio}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\item \small{Computer Science student and AI/ML enthusiast with hands-on experience in building and deploying machine learning models. Skilled in data preprocessing and model evaluation. Passionate about solving real-world problems using AI.}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Jaypee University of Engineering and Technology}{2023 -- Present}
+  {B.Tech in Computer Science Engineering}{Guna, MP}
+\resumeSubheading
+  {Gyan Sthali Academy}{2022}
+  {CBSE (Class XII, Class X)}{India}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Web Development Intern -- Trustique Assist Pvt. Ltd.}{May 2025 -- Jul 2025}
+  {}{}
+\resumeItemListStart
+  \resumeItem{Developed 4--10 responsive web application screens using React, HTML and CSS, improving UI/UX and reducing user friction.}
+  \resumeItem{Integrated REST APIs with backend systems to improve performance and data flow.}
+  \resumeItem{Led digital transformation initiatives by prioritizing feature improvements with design and engineering stakeholders using direct user feedback.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {College Complaint Analyzer using NLP}{2026}
+\resumeItemListStart
+  \resumeItem{Developed a full-stack complaint management system with role-based authentication and analytics dashboards for Students, Teachers, and Administrators.}
+  \resumeItem{Built an NLP pipeline using TF-IDF, NLTK, Logistic Regression, and Multinomial Naive Bayes for complaint classification, sentiment analysis, keyword extraction, and priority prediction.}
+  \resumeItem{Trained ML models on 672 labeled complaints across 12 categories, achieving 80\% classification accuracy and 72\% priority prediction accuracy.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+  {AI Customer Support Email Agent}{2026}
+\resumeItemListStart
+  \resumeItem{Built an AI-powered customer support system using RAG to classify emails, retrieve relevant documents with FAISS, and generate context-aware responses.}
+  \resumeItem{Implemented semantic search using Sentence Transformers with confidence-based routing to escalate low-confidence queries to human agents.}
+  \resumeItem{Developed the backend using Python, FastAPI, LangChain, and Gemini/OpenAI APIs, automating repetitive support tasks and reducing manual effort.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\item \textbf{Languages:} Python, C++, C, SQL
+\item \textbf{AI/ML:} Machine Learning, NLP, TF-IDF, Scikit-learn, Pandas, NumPy, NLTK, Logistic Regression, Random Forest, Multinomial Naive Bayes
+\item \textbf{Generative AI:} LangChain, RAG
+\item \textbf{Dev \& Collaboration:} Git, GitHub, VS Code, REST APIs
+\item \textbf{Core Concepts:} Data Structures and Algorithms
+\end{itemize}
+
+%-----------LEADERSHIP-----------
+\section{Leadership \& Cross-Functional Impact}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Co-Head of Logistics -- TEDxJUET 2026}{2026}
+  {}{}
+\resumeItemListStart
+  \resumeItem{Led logistics for a 100--300 attendee TEDx event, coordinating 15+ volunteers across speakers, venue, and operations.}
+  \resumeItem{Built on two years of event experience (TEDx 2025 Volunteer, ICMME 2025 Coordinator), demonstrating consistent growth into cross-functional leadership.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Technical Joint Secretary \textbar\ Sports Joint Secretary}{2025 -- 2026}
+  {Development Club \& CSI \textbar\ Sports}{}
+\resumeItemListStart
+  \resumeItem{Managed simultaneous leadership roles across technical and sports clubs while coordinating a 15-member student community.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\item \small{Infosys Springboard \textbar\ GeeksforGeeks (GFG) \textbar\ Microsoft Badge}
+\end{itemize}
+
+\end{document}
