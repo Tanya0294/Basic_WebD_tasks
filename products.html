@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags for SEO -->
+    <title>Store | Tanya Rathore | AI/ML Portfolio</title>
+    <meta name="description" content="Tanya Rathore's Model Zoo and AI/ML store. Filter, sort, and browse pretrained models, datasets, and API endpoints.">
+    <meta name="keywords" content="Tanya Rathore, Model Zoo, Dataset, AI Models, Pretrained Weights, Computer Vision, NLP, APIs">
+    
+    <!-- Google Fonts - Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Core CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header class="navbar-header" id="header">
+        <div class="nav-container container">
+            <a href="index.html#hero" class="nav-logo">
+                <span class="logo-accent">&lt;</span>Tanya<span class="logo-accent">R /&gt;</span>
+            </a>
+            
+            <!-- Desktop Navigation Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#hero" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="products.html" class="nav-link active">Store</a></li>
+                    <li><a href="index.html#todo" class="nav-link">To-Do</a></li>
+                    <li><a href="index.html#quiz" class="nav-link">Quiz</a></li>
+                    <li><a href="index.html#api-data" class="nav-link">Joke API</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- CTA button & Hamburguer Menu for Mobile -->
+            <div class="nav-actions">
+                <a href="mailto:riya.rathore@example.com" class="btn btn-secondary nav-cta-btn">Hire Me</a>
+                <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <!-- ==================== STORE HERO ==================== -->
+        <section class="section-padding" style="background-color: var(--color-bg-darkest); padding-bottom: 2rem;">
+            <!-- Decorative Background Glows -->
+            <div class="hero-bg-glow glow-1"></div>
+            <div class="hero-bg-glow glow-2"></div>
+            
+            <div class="container scroll-reveal">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <span class="section-tag">Marketplace</span>
+                    <h1 class="section-title">Model Zoo &amp; AI Artifact Store</h1>
+                    <div class="section-underline"></div>
+                </div>
+                <p style="text-align: center; color: var(--color-text-secondary); max-width: 650px; margin: 0 auto 1.5rem auto; font-size: 1.1rem;">
+                    Download pre-trained models, subscribe to deployment-ready APIs, and license high-quality structured datasets developed for cutting-edge machine learning tasks.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==================== STORE CATALOG LAYOUT ==================== -->
+        <section class="section-padding" style="background-color: var(--color-bg-darker); border-top: 1px solid var(--border-glass); padding-top: 4rem;">
+            <div class="container">
+                <div class="store-layout-grid">
+                    
+                    <!-- ── SIDEBAR FILTER PANEL ── -->
+                    <aside class="store-filter-sidebar scroll-reveal">
+                        <div class="filter-panel-card">
+                            <h2 class="filter-panel-title">
+                                <i class="fa-solid fa-sliders"></i> Filter Catalog
+                            </h2>
+                            <div class="filter-panel-underline"></div>
+
+                            <!-- Search Input -->
+                            <div class="filter-group">
+                                <label for="search-input" class="filter-label">Search Keywords</label>
+                                <div class="filter-search-wrap">
+                                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                    <input type="text" id="search-input" class="filter-search-input" placeholder="e.g. PyTorch, CNN...">
+                                </div>
+                            </div>
+
+                            <!-- Category Checkboxes -->
+                            <div class="filter-group">
+                                <label class="filter-label">Category</label>
+                                <div class="filter-checkbox-list">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="category" value="Computer Vision" checked>
+                                        <span class="checkmark"></span>
+                                        Computer Vision
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="category" value="Natural Language Processing" checked>
+                                        <span class="checkmark"></span>
+                                        Natural Language Processing
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="category" value="Datasets" checked>
+                                        <span class="checkmark"></span>
+                                        Datasets
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="category" value="APIs" checked>
+                                        <span class="checkmark"></span>
+                                        APIs
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Price Slider -->
+                            <div class="filter-group">
+                                <div class="price-slider-header">
+                                    <label for="price-range" class="filter-label">Max Price</label>
+                                    <span id="price-value" class="price-value-badge">$250</span>
+                                </div>
+                                <input type="range" id="price-range" class="filter-price-slider" min="0" max="250" value="250" step="5">
+                                <div class="price-slider-limits">
+                                    <span>$0</span>
+                                    <span>$250</span>
+                                </div>
+                            </div>
+
+                            <!-- Reset Button -->
+                            <button id="reset-filters-btn" class="btn btn-secondary btn-block" style="margin-top: 1rem;">
+                                <i class="fa-solid fa-rotate-left"></i> Reset All Filters
+                            </button>
+                        </div>
+                    </aside>
+
+                    <!-- ── MAIN CATALOG GRID CONTENT ── -->
+                    <div class="store-catalog-content">
+                        
+                        <!-- Catalog Topbar -->
+                        <div class="catalog-topbar scroll-reveal">
+                            <div id="results-count" class="results-count">Showing 6 assets</div>
+                            
+                            <div class="catalog-sort-wrap">
+                                <label for="sort-select" class="sort-label">Sort By</label>
+                                <select id="sort-select" class="sort-select">
+                                    <option value="rating-desc" selected>⭐ Rating: High to Low</option>
+                                    <option value="price-asc">💵 Price: Low to High</option>
+                                    <option value="price-desc">💵 Price: High to Low</option>
+                                    <option value="name-asc">🔤 Name: A to Z</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Product Cards Grid -->
+                        <div id="product-grid" class="store-product-grid scroll-reveal">
+                            <!-- Cards will be dynamically injected by products.js -->
+                        </div>
+
+                        <!-- Empty State Placeholder -->
+                        <div id="store-empty-state" class="store-empty-state" style="display: none;">
+                            <i class="fa-regular fa-folder-open empty-icon"></i>
+                            <h3>No Assets Found</h3>
+                            <p>We couldn't find any products matching your search terms or filter combinations. Try adjusting your sidebar values!</p>
+                            <button id="empty-reset-btn" class="btn btn-primary">Clear Search &amp; Filters</button>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer-wrapper">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="index.html#hero" class="footer-logo">
+                    <span class="logo-accent">&lt;</span>Tanya<span class="logo-accent">R /&gt;</span>
+                </a>
+                <p class="footer-tagline">Synthesizing intelligence, developing solutions.</p>
+            </div>
+            
+            <div class="footer-right">
+                <p class="copyright">&copy; 2026 Tanya Rathore. All rights reserved.</p>
+                <p class="attribution">Designed &amp; Built for ApexPlanet Internship &mdash; Task 4</p>
+            </div>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <a href="index.html#hero" class="back-to-top" id="back-to-top" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </footer>
+
+    <!-- Core Javascript logic -->
+    <script src="script.js"></script>
+    <!-- Product Listing Logic -->
+    <script src="products.js"></script>
+</body>
+</html>

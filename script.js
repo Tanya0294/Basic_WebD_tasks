@@ -33,15 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
-        
+        });
 
         // Close menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
-            
-        
+            });
+        });
     }
 
     // ==========================================
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (welcomeBtn) {
         welcomeBtn.addEventListener('click', () => {
             alert("Welcome to Tanya Rathore's AI/ML Portfolio!");
-        
+        });
     }
 
     // ==========================================
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             backToTopBtn.classList.remove('visible');
         }
-    
+    });
 
     // ==========================================
     // 4. Smooth Navigation Scrolling
@@ -92,11 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: 'smooth'
-                    
+                    });
                 }
             }
-        
-    
+        });
+    });
 
     // ==========================================
     // 5. Dynamic Navbar Highlighting on Scroll
@@ -117,14 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (link.getAttribute('href') === `#${id}`) {
                         link.classList.add('active');
                     }
-                
+                });
             }
-        
+        });
     }, navObserverOptions);
 
     sections.forEach(section => {
         navObserver.observe(section);
-    
+    });
 
     // ==========================================
     // 6. Scroll Reveal Animations
@@ -141,12 +141,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.classList.add('revealed');
                 revealObserver.unobserve(entry.target);
             }
-        
+        });
     }, revealObserverOptions);
 
     revealElements.forEach(element => {
         revealObserver.observe(element);
-    
+    });
 
 
     // ==========================================================================
@@ -271,15 +271,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             el.addEventListener('blur', () => {
                 validateField(field, group, error, rules);
-            
+            });
 
             el.addEventListener('input', () => {
                 const grp = document.getElementById(group);
                 if (grp && grp.classList.contains('has-error')) {
                     validateField(field, group, error, rules);
                 }
-            
-        
+            });
+        });
 
         // Form submit — run full validation pass
         contactForm.addEventListener('submit', (e) => {
@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Scroll first errored field into view and focus it
                 const firstError = contactForm.querySelector('.has-error input, .has-error textarea');
                 if (firstError) {
-                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' 
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     firstError.focus();
                 }
                 return;
@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fieldConfigs.forEach(({ group }) => {
                     const grp = document.getElementById(group);
                     if (grp) grp.classList.remove('has-error', 'is-valid');
-                
+                });
 
                 // Show success banner
                 formSuccess.classList.add('visible');
@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => formSuccess.classList.remove('visible'), 6000);
 
             }, 1500);
-        
+        });
     }
 
 
@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentFilter === 'active')    return !t.completed;
             if (currentFilter === 'completed') return t.completed;
             return true; // 'all'
-        
+        });
 
         if (filtered.length === 0) {
             todoEmpty.classList.add('visible');
@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
             todoEmpty.classList.remove('visible');
             filtered.forEach(task => {
                 todoList.appendChild(createTaskElement(task));
-            
+            });
         }
 
         updateStats();
@@ -499,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tasks = tasks.filter(t => t.id !== id);
             saveTasks();
             renderTasks();
-        }, { once: true 
+        }, { once: true });
     }
 
     // ---- Remove all completed tasks ----
@@ -518,8 +518,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     saveTasks();
                     renderTasks();
                 }
-            }, { once: true 
-        
+            }, { once: true });
+        });
     }
 
     // ---- Event Listeners ----
@@ -530,12 +530,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Enter key submits the task
     todoInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') addTask();
-    
+    });
 
     // Clear error as user types
     todoInput.addEventListener('input', () => {
         if (todoInputErr.textContent) todoInputErr.textContent = '';
-    
+    });
 
     // Filter tab buttons
     filterBtns.forEach(btn => {
@@ -543,13 +543,13 @@ document.addEventListener('DOMContentLoaded', () => {
             filterBtns.forEach(b => {
                 b.classList.remove('active');
                 b.setAttribute('aria-selected', 'false');
-            
+            });
             btn.classList.add('active');
             btn.setAttribute('aria-selected', 'true');
             currentFilter = btn.dataset.filter;
             renderTasks();
-        
-    
+        });
+    });
 
     // Clear completed button
     todoClearBtn.addEventListener('click', clearCompleted);
@@ -568,11 +568,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     renderTasks();
-
- // end DOMContentLoaded
-
-    // ==========================================================================
-    
 
     // ==========================================================================
     // 10. INTERACTIVE QUIZ — JavaScript Logic  [Task 3]
@@ -913,4 +908,3 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(loadAdvice, 300);
     }
 }); // End DOMContentLoaded
-
