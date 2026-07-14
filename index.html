@@ -31,13 +31,15 @@
             <!-- Desktop Navigation Menu -->
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="#hero" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="#todo" class="nav-link">To-Do</a></li>
-                    <li><a href="#quiz" class="nav-link">Quiz</a></li>
-                    <li><a href="#api-data" class="nav-link">Joke API</a></li>
+                    <li><a href="index.html#hero" class="nav-link active">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="products.html" class="nav-link">Store</a></li>
+                    <li><a href="index.html#todo" class="nav-link">To-Do</a></li>
+                    <li><a href="index.html#quiz" class="nav-link">Quiz</a></li>
+                    <li><a href="index.html#api-data" class="nav-link">Joke API</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
 
@@ -246,6 +248,111 @@
             </div>
         </section>
 
+        <!-- ==================== FEATURED PROJECTS SECTION ==================== -->
+        <section id="featured-projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">03. Showcase</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Neural Style Transfer -->
+                    <div class="project-card scroll-reveal">
+                        <div class="project-img-container">
+                            <div class="project-banner style-transfer-banner">
+                                <div class="banner-gradient"></div>
+                                <i class="fa-solid fa-palette banner-icon"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="proj-link-btn" aria-label="GitHub Repository">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="projects.html" class="proj-link-btn" aria-label="View Details">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Computer Vision &amp; Art</span>
+                            <h3 class="project-title">Neural Style Transfer</h3>
+                            <p class="project-desc">An interactive tool that applies artistic styles from famous paintings to user-uploaded photographs using PyTorch and CNNs.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>PyTorch</span>
+                                <span>CNN</span>
+                                <span>Deep Learning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Pneumonia Detection -->
+                    <div class="project-card scroll-reveal">
+                        <div class="project-img-container">
+                            <div class="project-banner pneumonia-banner">
+                                <div class="banner-gradient"></div>
+                                <i class="fa-solid fa-file-medical banner-icon"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="proj-link-btn" aria-label="GitHub Repository">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="projects.html" class="proj-link-btn" aria-label="View Details">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Medical Diagnostics</span>
+                            <h3 class="project-title">Pneumonia X-Ray Classifier</h3>
+                            <p class="project-desc">Deep learning model designed to analyze pediatric chest X-ray scans and identify signs of pneumonia with high accuracy.</p>
+                            <div class="project-tags">
+                                <span>TensorFlow</span>
+                                <span>Keras</span>
+                                <span>Computer Vision</span>
+                                <span>Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Autonomous Lane Detection -->
+                    <div class="project-card scroll-reveal">
+                        <div class="project-img-container">
+                            <div class="project-banner autonomous-banner">
+                                <div class="banner-gradient"></div>
+                                <i class="fa-solid fa-car banner-icon"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="proj-link-btn" aria-label="GitHub Repository">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="projects.html" class="proj-link-btn" aria-label="View Details">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Robotics &amp; Autonomous Systems</span>
+                            <h3 class="project-title">Self-Driving Lane Detector</h3>
+                            <p class="project-desc">Real-time lane-line tracing pipeline for self-driving simulation, utilizing advanced computer vision filters and Hough transform.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>OpenCV</span>
+                                <span>NumPy</span>
+                                <span>Self-Driving</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal" style="text-align: center; margin-top: 3.5rem;">
+                    <a href="projects.html" class="btn btn-primary">
+                        View All Projects <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- ==================== CONTACT FORM SECTION ==================== -->
         <section id="contact" class="contact-section section-padding">
@@ -466,35 +573,55 @@
                     <h2 class="section-title">Interactive Tech Quiz</h2>
                     <div class="section-underline"></div>
                 </div>
-                
+
                 <div class="quiz-wrapper scroll-reveal">
                     <div class="quiz-card">
-                        <!-- Score Display (Hidden initially) -->
-                        <div id="quiz-results" class="quiz-results" style="display: none;">
-                            <h3 class="results-title">Quiz Completed!</h3>
-                            <p class="results-score">Your Score: <span id="score-text" class="text-gradient">0/5</span></p>
-                            <button id="restart-quiz-btn" class="btn btn-primary">Try Again</button>
+
+                        <!-- ── START SCREEN ── -->
+                        <div id="quiz-start-screen" class="quiz-screen" style="display: flex;">
+                            <div class="quiz-start-icon"><i class="fa-solid fa-brain"></i></div>
+                            <h3 class="quiz-start-title">AI & Machine Learning Quiz</h3>
+                            <p class="quiz-start-desc">Test your knowledge across 7 questions covering ML, NLP, Deep Learning, and more. Good luck!</p>
+                            <button id="quiz-start-btn" class="btn btn-primary">
+                                <i class="fa-solid fa-play"></i> Start Quiz
+                            </button>
                         </div>
 
-                        <!-- Quiz Content -->
-                        <div id="quiz-content">
-                            <div class="quiz-progress">
-                                <span id="question-counter">Question 1 of 5</span>
-                                <div class="progress-bar-container">
-                                    <div id="quiz-progress-bar" class="progress-bar-fill"></div>
-                                </div>
+                        <!-- ── QUESTION SCREEN ── -->
+                        <div id="quiz-question-screen" class="quiz-screen" style="display: none; flex-direction: column; align-items: stretch;">
+                            <!-- Header: counter + live score -->
+                            <div class="quiz-header">
+                                <span id="quiz-counter" class="quiz-counter">Question 1 of 7</span>
+                                <span id="quiz-score-live" class="quiz-score-live">Score: 0</span>
                             </div>
-                            
-                            <h3 id="quiz-question" class="quiz-question-text">Loading question...</h3>
-                            
-                            <div id="quiz-options" class="quiz-options-container">
-                                <!-- Options injected by JS -->
+                            <!-- Progress bar -->
+                            <div class="quiz-progress-track">
+                                <div id="quiz-progress-fill" class="quiz-progress-fill"></div>
                             </div>
-                            
-                            <div class="quiz-footer">
-                                <button id="next-question-btn" class="btn btn-primary" disabled>Next Question <i class="fa-solid fa-arrow-right"></i></button>
-                            </div>
+                            <!-- Question text -->
+                            <p id="quiz-question-text" class="quiz-question-text">Loading question...</p>
+                            <!-- Answer options (injected by JS) -->
+                            <div id="quiz-options" class="quiz-options"></div>
+                            <!-- Feedback box -->
+                            <div id="quiz-feedback" class="quiz-feedback" style="display: none;"></div>
+                            <!-- Next button -->
+                            <button id="quiz-next-btn" class="btn btn-primary quiz-next-btn" style="display: none;">
+                                Next <i class="fa-solid fa-arrow-right"></i>
+                            </button>
                         </div>
+
+                        <!-- ── RESULTS SCREEN ── -->
+                        <div id="quiz-results-screen" class="quiz-screen" style="display: none;">
+                            <div id="quiz-results-icon" class="quiz-results-icon"></div>
+                            <h3 class="quiz-results-title">Quiz Completed!</h3>
+                            <p id="quiz-results-score" class="quiz-results-score">You scored 0 / 7</p>
+                            <p id="quiz-results-grade" class="quiz-results-grade"></p>
+                            <div id="quiz-summary" class="quiz-summary"></div>
+                            <button id="quiz-restart-btn" class="btn btn-primary">
+                                <i class="fa-solid fa-rotate-left"></i> Try Again
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -505,24 +632,98 @@
             <div class="container">
                 <div class="section-header scroll-reveal">
                     <span class="section-tag">06. Live Data</span>
-                    <h2 class="section-title">Programmer Joke of the Day</h2>
+                    <h2 class="section-title">Live API Feeds</h2>
                     <div class="section-underline"></div>
                 </div>
-                
-                <div class="api-wrapper scroll-reveal">
-                    <div class="quote-card">
-                        <div class="quote-icon"><i class="fa-solid fa-code"></i></div>
-                        <div id="quote-content" class="quote-content">
-                            <div class="loading-spinner">
-                                <i class="fa-solid fa-circle-notch fa-spin"></i> Fetching joke...
+
+                <div class="api-grid scroll-reveal">
+
+                    <!-- ── CARD 1: Programmer Joke ── -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <div class="api-card-icon" style="background: linear-gradient(135deg, #4f46e5, #7c3aed);">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <p class="api-card-title">Programmer Joke</p>
+                                <p class="api-card-source">v2.jokeapi.dev</p>
                             </div>
                         </div>
-                        <div class="quote-actions">
-                            <button id="fetch-quote-btn" class="btn btn-outline">
-                                <i class="fa-solid fa-rotate-right"></i> Get Another Joke
+                        <div class="api-card-body">
+                            <div id="joke-loader" class="api-loader">
+                                <span class="loader-dot"></span>
+                                <span class="loader-dot"></span>
+                                <span class="loader-dot"></span>
+                            </div>
+                            <p id="joke-text" class="api-text" style="display: none;"></p>
+                            <p id="joke-punchline" class="api-punchline" style="display: none;"></p>
+                        </div>
+                        <div class="api-card-footer">
+                            <span class="api-badge">GET /joke/Programming</span>
+                            <button id="joke-refresh-btn" class="api-refresh-btn">
+                                <i class="fa-solid fa-rotate-right"></i> Refresh
                             </button>
                         </div>
                     </div>
+
+                    <!-- ── CARD 2: CS Trivia ── -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <div class="api-card-icon" style="background: linear-gradient(135deg, #0ea5e9, #0284c7);">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <p class="api-card-title">CS Trivia</p>
+                                <p class="api-card-source">opentdb.com</p>
+                            </div>
+                        </div>
+                        <div class="api-card-body">
+                            <div id="trivia-loader" class="api-loader">
+                                <span class="loader-dot"></span>
+                                <span class="loader-dot"></span>
+                                <span class="loader-dot"></span>
+                            </div>
+                            <p id="trivia-question" class="api-text" style="display: none;"></p>
+                            <div id="trivia-answer-wrap" class="trivia-answer-wrap" style="display: none;">
+                                <button id="trivia-reveal-btn" class="trivia-reveal-btn">Reveal Answer</button>
+                                <span id="trivia-answer" class="trivia-answer" style="display: none;"></span>
+                            </div>
+                        </div>
+                        <div class="api-card-footer">
+                            <span class="api-badge">GET /api.php?category=18</span>
+                            <button id="trivia-refresh-btn" class="api-refresh-btn">
+                                <i class="fa-solid fa-rotate-right"></i> Refresh
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ── CARD 3: Advice Slip ── -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <div class="api-card-icon" style="background: linear-gradient(135deg, #db2777, #be185d);">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div>
+                                <p class="api-card-title">Daily Advice</p>
+                                <p class="api-card-source">api.adviceslip.com</p>
+                            </div>
+                        </div>
+                        <div class="api-card-body">
+                            <div id="advice-loader" class="api-loader">
+                                <span class="loader-dot"></span>
+                                <span class="loader-dot"></span>
+                                <span class="loader-dot"></span>
+                            </div>
+                            <p id="advice-text" class="api-text api-quote" style="display: none;"></p>
+                        </div>
+                        <div class="api-card-footer">
+                            <span class="api-badge">GET /advice</span>
+                            <button id="advice-refresh-btn" class="api-refresh-btn">
+                                <i class="fa-solid fa-rotate-right"></i> Refresh
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
